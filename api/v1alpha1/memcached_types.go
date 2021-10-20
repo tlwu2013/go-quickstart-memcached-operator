@@ -52,31 +52,31 @@ type MemcachedStatus struct {
 
 	// Status of the ELM Instance Deployment created and managed by it
 	//+operator-sdk:csv:customresourcedefinitions:type=status,order=90,displayName="Deployment Status"
-	DeploymentStatus 	 DeploymentStatus `json:"deploymentStatus"`
+	DeploymentStatus   DeploymentStatus `json:"deploymentStatus"`
 
 	// Status of the ELM Instance Upgrade
 	//+operator-sdk:csv:customresourcedefinitions:type=status,order=94,displayName="Upgrade Status"
-	UpgradeStatus 	 	 UpgradeStatus `json:"upgradeStatus"`
+	UpgradeStatus      UpgradeStatus `json:"upgradeStatus"`
 }
 
 type ApplicationsStatus struct {
 
-		// Represents the latest available observations of applications current state.
-		//+operator-sdk:csv:customresourcedefinitions:type=status,order=93,displayName="Applications Events",xDescriptors={"urn:alm:descriptor:io.kubernetes.conditions"}
+    // Represents the latest available observations of applications current state.
+    //+operator-sdk:csv:customresourcedefinitions:type=status,order=93,displayName="Applications Events",xDescriptors={"urn:alm:descriptor:io.kubernetes.conditions"}
     Conditions []metav1.Condition `json:"conditions"`
 }
 
 type DeploymentStatus struct {
 
-		// Represents the latest available observations of a deployment's current state.
-		//+operator-sdk:csv:customresourcedefinitions:type=status,order=91,displayName="Creation Events",xDescriptors={"urn:alm:descriptor:io.kubernetes.conditions"}
+    // Represents the latest available observations of a deployment's current state.
+    //+operator-sdk:csv:customresourcedefinitions:type=status,order=91,displayName="Creation Events",xDescriptors={"urn:alm:descriptor:io.kubernetes.conditions"}
     Conditions []metav1.Condition `json:"conditions"`
 }
 
 type UpgradeStatus struct {
 
-		// Represents the latest available observations of an upgrade state.
-		//+operator-sdk:csv:customresourcedefinitions:type=status,order=95,displayName="Upgrade Events",xDescriptors={"urn:alm:descriptor:io.kubernetes.conditions"}
+    // Represents the latest available observations of an upgrade state.
+    //+operator-sdk:csv:customresourcedefinitions:type=status,order=95,displayName="Upgrade Events",xDescriptors={"urn:alm:descriptor:io.kubernetes.conditions"}
     Conditions []metav1.Condition `json:"conditions"`
 }
 
